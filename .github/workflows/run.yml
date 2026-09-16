@@ -1,0 +1,31 @@
+name: Ejecutar PLAY9
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dependencias y Xvfb
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y xvfb
+          pip install selenium webdriver-manager psutil requests
+
+      - name: Ejecutar script de Python con Xvfb
+        env:
+          PYTHONUNBUFFERED: "1"
+        run: |
+          xvfb-run --auto-servernum python PLAY9.py
