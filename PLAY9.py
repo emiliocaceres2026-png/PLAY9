@@ -16,7 +16,7 @@ LINKS = [
     "https://casino.virtualsoft.tech/game/play/?gameid=70514&mode=real&provider=undefined&lan=es&partnerid=0&token=0P14100116Pz4oorga6cd91qz8oxuc&balance=0&currency=PEN&userid=14051468&isMobile=false"
 ]
 
-PLANTILLA_BASE = "Quieres ganar Mas de 2mil en 45 minutos Escribeme al Whatsapp😍⚓+𝟓𝟐 𝟕𝟕𝟑𝟐𝟔𝟕𝟑𝟓𝟓𝟓 ⚓𝚝elegram⚓ 𝙰𝚅𝙸𝙰𝚃𝙾𝚁𝙿𝙺𝙰 sin cobros adelantados⚓⛺⚓⛳⚓😘VAR_3"
+PLANTILLA_BASE = "Quieres ganar Mas de 2mil en 45 minutos Escribeme al Whatsapp😍⚓+𝟓𝟐 𝟕𝟕𝟏𝟗𝟑𝟐𝟓𝟏𝟐𝟕 ⚓𝚝elegram⚓ 𝙰𝚅𝙸𝙰𝚃𝙾𝚁𝙿𝙺𝙰 sin cobros adelantados⚓⛺⚓⛳⚓😘VAR_3"
 EMOJIS_POOL = list("😎😷😋😍😘😝😉😙🤓🔥💧👸😏🤑🤗👊✊👍💥👌👈👇👆👉👅👄🤘🙆💆💙💜💛💚👑🎩🙋💃🐽💗💌🤖🐺🐶💎🐦🐤🐥🐞🦄🐠🦀🦁🐼🐴🐒🐵➗🌹🌻🍄💐🌵🐩💵🎁💰")
 
 historial_enviados = set()
