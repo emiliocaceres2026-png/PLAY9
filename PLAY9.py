@@ -26,14 +26,15 @@ E_REGALO = '<tg-emoji emoji-id="5215668908278686541">🎁</tg-emoji>'
 E_ADN2 = '<tg-emoji emoji-id="5215673679987355184">🧬</tg-emoji>'
 E_DIAMANTE = '<tg-emoji emoji-id="6059684519437405439">💎</tg-emoji>'
 
-# Configuración de rutas (compatible con Linux / GitHub Actions)
+# Configuración de rutas compatible con Linux / GitHub Actions
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 RUTA_UBICACIONES = os.path.join(BASE_DIR, "ubicaciones")
 ARCHIVO_BD = os.path.join(BASE_DIR, "usuarios_seguridad.json")
 
-if not os.path.exists(RUTA_UBICACIONES):
-    os.makedirs(RUTA_UBICACIONES, exist_ok=True)
+# Crear la carpeta de ubicaciones si no existe
+os.makedirs(RUTA_UBICACIONES, exist_ok=True)
 
+# Cargar base de datos persistente de seguridad
 if os.path.exists(ARCHIVO_BD):
     with open(ARCHIVO_BD, "r", encoding="utf-8") as f:
         try:
