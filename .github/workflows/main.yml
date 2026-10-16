@@ -5,6 +5,11 @@ on:
   push:
     branches: [ "main", "master" ]
 
+# Concurrency cancela cualquier instancia previa automáticamente para evitar el error 409
+concurrency:
+  group: bot-telegram-singleton
+  cancel-in-progress: true
+
 jobs:
   run-bot:
     runs-on: ubuntu-latest
