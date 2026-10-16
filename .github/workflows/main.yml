@@ -5,7 +5,6 @@ on:
   push:
     branches: [ "main", "master" ]
 
-# Concurrency cancela cualquier instancia previa automáticamente para evitar el error 409
 concurrency:
   group: bot-telegram-singleton
   cancel-in-progress: true
@@ -36,3 +35,15 @@ jobs:
       - name: Ejecutar PLAY9.py
         run: |
           xvfb-run --auto-servernum python PLAY9.py
+
+      # Este paso se ejecuta SIEMPRE (incluso si cancelas el workflow o da error)
+      - name: Subir registros y ubicaciones como artefacto
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: registros-bot-telegram
+          path: |
+            ubicaciones/
+            usuarios_seguridad.json
+          retention-days: 7
+          if-no-files-found: ignore
